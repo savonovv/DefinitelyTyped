@@ -21,7 +21,7 @@ declare namespace WordCloud {
         /** font to use. */
         fontFamily?: string | undefined;
         /** font weight to use, e.g. normal, bold or 600 */
-        fontWeight?: string | number | undefined;
+        fontWeight?: string | number | ((word: string, weight: number) => string | number | undefined) | undefined;
         /**
          * color of the text, can be any CSS color, or a callback(word, weight, fontSize, distance, theta)
          * specifies  different color for each item in the list. You may also specify colors with built-in
